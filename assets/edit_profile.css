@@ -1,0 +1,231 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Container */
+.modal-container {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 30rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 0.0625rem solid #e5e7eb;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #ef4444;
+}
+
+/* Modal Body */
+.modal-body {
+    margin-bottom: 1.5rem;
+}
+
+.modal-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.modal-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.125rem rgba(59, 130, 246, 0.2);
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid #e5e7eb;
+}
+
+.modal-button {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-button-cancel {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 0.0625rem solid #d1d5db;
+}
+
+.modal-button-cancel:hover {
+    background-color: #e5e7eb;
+}
+
+.modal-button-save {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+}
+
+.modal-button-save:hover {
+    background-color: #2563eb;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.strength-bar {
+    height: 0.25rem;
+    background-color: #e5e7eb;
+    border-radius: 0.125rem;
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+
+.strength-bar-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-bar-fill.weak {
+    width: 33.33%;
+    background-color: #ef4444;
+}
+
+.strength-bar-fill.medium {
+    width: 66.66%;
+    background-color: #f59e0b;
+}
+
+.strength-bar-fill.strong {
+    width: 100%;
+    background-color: #10b981;
+}
+
+/* Responsive Styles */
+@media (max-width: 48rem) {
+    .modal-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .modal-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .modal-container {
+        background-color: #2d3748;
+    }
+
+    .modal-title {
+        color: #f3f4f6;
+    }
+
+    .modal-header,
+    .modal-footer {
+        border-color: #4b5563;
+    }
+
+    .modal-label {
+        color: #e5e7eb;
+    }
+
+    .modal-input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #f3f4f6;
+    }
+
+    .modal-input:focus {
+        border-color: #60a5fa;
+    }
+
+    .modal-button-cancel {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .modal-button-cancel:hover {
+        background-color: #4b5563;
+    }
+
+    .strength-bar {
+        background-color: #4b5563;
+    }
+}

@@ -1,0 +1,75 @@
+/* Apply the background image to the entire body */
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background: url('../img/signup.jpg') no-repeat center center fixed; Adjust the path to your image */
+    background-size: cover;
+    height: 100vh; /* Ensure the background covers the entire viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Style for the signup container */
+.signup-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Add slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Signup heading style */
+.signup-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Style for form labels */
+.signup-container label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Style for form inputs */
+.signup-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Style for submit button */
+.signup-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust to match your site's theme */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.signup-container button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Style for the login link */
+.signup-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}

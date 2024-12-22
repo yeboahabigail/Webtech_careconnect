@@ -1,0 +1,153 @@
+/* Global Background Styles */
+body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+    min-height: 100vh;
+}
+
+/* Card Container Styles */
+.max-w-4xl {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Container Styles */
+.flatpickr-calendar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 8px;
+    background: white;
+}
+
+.flatpickr-months {
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+    border-radius: 8px 8px 0 0;
+    padding: 8px 0;
+    color: white;
+}
+
+.flatpickr-month {
+    height: 40px;
+}
+
+.flatpickr-current-month {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.flatpickr-monthDropdown-months {
+    color: white;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    color: rgba(255, 255, 255, 0.8) !important;
+    fill: white !important;
+}
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+    color: white !important;
+}
+
+/* Calendar Header Styles */
+.flatpickr-weekday {
+    background: transparent;
+    color: #64748b;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+/* Calendar Day Styles */
+.flatpickr-day {
+    border-radius: 8px;
+    margin: 2px;
+    height: 40px;
+    line-height: 40px;
+    color: #334155;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.flatpickr-day.selected {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+    border-color: #3b82f6 !important;
+    color: white !important;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+}
+
+.flatpickr-day.available:not(.selected) {
+    background-color: #f1f5ff;
+    border-color: transparent;
+    color: #3b82f6;
+}
+
+.flatpickr-day:hover:not(.selected):not(.disabled) {
+    background-color: #e5edff;
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.flatpickr-day.disabled {
+    background-color: #f8fafc;
+    color: #cbd5e1;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.flatpickr-day.today {
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+/* Available Dates List Styles */
+.date-list-item {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: #334155;
+}
+
+.date-list-item:hover {
+    background-color: #f1f5ff;
+    border-color: #3b82f6;
+    transform: translateX(4px);
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.date-list-item.selected {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Form Element Styles */
+input, select, textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Button Styles */
+button[type="submit"] {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
